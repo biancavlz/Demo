@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fancy Form — Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="fancyForm" class="card" novalidate>
+        <h1>Join the Beta</h1>
+        <p class="subtitle">An interactive, animated sign-up form</p>
+
+        <div class="field">
+          <label for="name">Full name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            minlength="2"
+            placeholder="Jane Doe"
+          />
+          <small class="error"></small>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="you@example.com"
+            />
+            <small class="error"></small>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="(+1) 555‑555‑5555"
+            />
+            <small class="error"></small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="plan">Plan</label>
+          <select id="plan" name="plan">
+            <option>Free</option>
+            <option>Pro</option>
+            <option>Enterprise</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Tell us about your project</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="A brief description..."
+          ></textarea>
+        </div>
+
+        <div class="field file">
+          <label for="avatar">Avatar (optional)</label>
+          <input id="avatar" name="avatar" type="file" accept="image/*" />
+          <div id="preview" class="preview" aria-hidden="true"></div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary" id="submitBtn">
+            <span>Get Started</span>
+          </button>
+          <button type="button" class="btn ghost" id="resetBtn">Reset</button>
+        </div>
+
+        <div id="progress" class="progress" hidden>
+          <div class="bar"></div>
+        </div>
+
+        <div id="success" class="success" hidden>
+          <h2>Thanks!</h2>
+          <p>We've received your request — we'll be in touch soon.</p>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
